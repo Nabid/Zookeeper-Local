@@ -1,0 +1,16 @@
+kubectl delete -f ./
+kubectl create -f ./
+
+kubectl exec -ti zk-0 -- /bin/bash
+
+kubectl get all  
+
+kubectl describe pod zk-2
+
+kubectl get pods -w
+
+kubectl describe statefulsets zk
+
+kubectl exec zookeeper-0 zkCli.sh create /hello world
+kubectl get pv 
+kubectl get pvc
