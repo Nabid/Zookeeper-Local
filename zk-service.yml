@@ -26,13 +26,4 @@ spec:
     name: client
   selector:
     app: zk
----
-apiVersion: policy/v1
-kind: PodDisruptionBudget
-metadata:
-  name: zk-pdb
-spec:
-  selector:
-    matchLabels:
-      app: zk
-  maxUnavailable: 1
+    
